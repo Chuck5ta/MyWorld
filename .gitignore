@@ -1,32 +1,9 @@
-# Prerequisites
-*.d
+# Do not commit (upload to Github) the following
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Directories
+.vs/
+build/
 
-# Precompiled Headers
-*.gch
-*.pch
+# Files
+*.user
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
