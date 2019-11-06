@@ -3,6 +3,9 @@
 # Directories
 .vs/
 build/
+Debug/
+Release/
+
 
 # Files
 *.user
