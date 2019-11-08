@@ -20,13 +20,13 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{1F3BD9C0-8D6F-4514-A63A-92F13013560E}</ProjectGuid>
+    <ProjectGuid>{5CDF055D-A552-4DE9-842D-3746087D16E3}</ProjectGuid>
     <RootNamespace>MyEngine</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
@@ -69,13 +69,18 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\build\bin\$(Configuration)\MyEngine\</OutDir>
+    <IntDir>$(SolutionDir)\build\obj\$(Configuration)\MyEngine\</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>MSWINDOWS;DLL_BUILD;ME_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,13 +128,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\CoreLibrary\Application.cpp" />
-    <ClCompile Include="src\CoreLibrary\Main.cpp" />
+    <ClInclude Include="CoreLibrary\MyEngine.h" />
+    <ClInclude Include="CoreLibrary\Defines.h" />
+    <ClInclude Include="CoreLibrary\Main.h" />
+    <ClInclude Include="MyEngine.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\CoreLibrary\Application.h" />
-    <ClInclude Include="src\CoreLibrary\Main.h" />
-    <ClInclude Include="src\MyEngine.h" />
+    <ClCompile Include="CoreLibrary\MyEngine.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

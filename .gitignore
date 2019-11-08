@@ -5,6 +5,7 @@
 build/
 Debug/
 Release/
+x64/
 
 
 # Files
