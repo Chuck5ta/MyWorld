@@ -10,6 +10,11 @@ project "MyEngine"
     targetdir ("build/bin/%{prj.name}")
     objdir ("build/obj/%{prj.name}")
 
+    -- Precompiled header
+    pchheader "pch.h"
+    pchsource "MyEngine/pch/pch.cpp"
+  --  filter "action:vs*"  -- for Visual Studio actions
+
     files
     {
         -- ** = Search the child folders
@@ -17,7 +22,7 @@ project "MyEngine"
         "%{prj.name}/**.cpp" -- include all source files
     }
 
- --   includedirs { }
+    includedirs { "MyEngine/pch" }
 
     filter "system:windows"
         cppdialect "C++17"
