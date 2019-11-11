@@ -1,6 +1,5 @@
 workspace "MyWorld"
     architecture "x64"
-
     configurations { "Debug", "Release", "Dist" }
 
 project "MyEngine"
@@ -13,7 +12,7 @@ project "MyEngine"
     -- Precompiled header
     pchheader "pch.h"
     pchsource "MyEngine/pch/pch.cpp"
-  --  filter "action:vs*"  -- for Visual Studio actions
+  --  filter "action:vs*"  -- for Visual Studio
 
     files
     {

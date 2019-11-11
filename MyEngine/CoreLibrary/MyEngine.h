@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Defines.h"
+#include "Defines.h" 
+// DllExport tells compiler to look at DLL file
 
 namespace MyEngine
 {
