@@ -1,5 +1,6 @@
 #include "pch.h"
-#include "MyEngine.h"
+#include "Application.h"
+#include "Log.h"
 
 namespace MyEngine
 {
@@ -13,6 +14,7 @@ namespace MyEngine
 
     void GameEngine::Run()
     {
+        LOG_INFO("Hello My World");
         while (true){}
     }
 }

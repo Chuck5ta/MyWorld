@@ -1,11 +1,12 @@
+#pragma once
 #include "pch.h"
 #include "Log.h"
 
 namespace MyEngine 
 {
-    void Log::TestMessage()
+    void Log::LogMessage(std::string sMessage)
     {
-        printf("Logging system activated!");
+        std::cout << sMessage << std::endl;
     }
 
 }

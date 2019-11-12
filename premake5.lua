@@ -73,7 +73,7 @@ project "MyWorld"
         -- copy the MyEngine DLL to the MyWorld build folder
         prebuildcommands
         {
-             "copy D:\\DEV\\MyWorld\\build\\bin\\MyEngine\\MyEngine.dll D:\\DEV\\MyWorld\\build\\bin\\MyWorld\\"
+             "copy C:\\DEV\\MyWorld\\build\\bin\\MyEngine\\MyEngine.dll C:\\DEV\\MyWorld\\build\\bin\\MyWorld\\"
         }
 
     filter "configurations:Debug"

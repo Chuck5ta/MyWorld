@@ -12,22 +12,23 @@
     - Location within code/project
 
 */
-#include "Defines.h"
-// DllExport tells compiler to look at DLL file
+#include "Defines.h" // DllExport tells compiler to look at DLL file
+#include "../pch/pch.h"
 
 namespace MyEngine 
 {
     class DllExport Log
     {
     public:
-        static void TestMessage();
+        static void LogMessage();
+        static void LogMessage(std::string);
 
     };
 
 }
 
 // Macros for the logging system
-#define LOG_ERROR(...)   ::MyEngine::Log::TestMessage();
-#define LOG_WARNING(...) ::MyEngine::Log::TestMessage();
-#define LOG_INFO(...)    ::MyEngine::Log::TestMessage();
+#define LOG_ERROR(...)   ::MyEngine::Log::LogMessage(__VA_ARGS__);
+#define LOG_WARNING(...) ::MyEngine::Log::LogMessage(__VA_ARGS__);
+#define LOG_INFO(...)    ::MyEngine::Log::LogMessage(__VA_ARGS__);
 
