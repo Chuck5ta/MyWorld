@@ -1,11 +1,14 @@
+#pragma once
+
 #include "pch.h"
 #include "Application.h"
-#include "Log.h"
 
 namespace MyEngine
 {
     GameEngine::GameEngine()
     {
+		// Create the main window
+
     }
 
     GameEngine::~GameEngine()
@@ -14,7 +17,8 @@ namespace MyEngine
 
     void GameEngine::Run()
     {
-        LOG_INFO("Hello My World");
+		LOG_INFO("Hello My World");
+
         while (true){}
     }
 }

@@ -13,21 +13,20 @@
 
 */
 #include "Defines.h" // DllExport tells compiler to look at DLL file
-#include "../pch/pch.h"
+#include "pch.h"
 
 namespace MyEngine 
 {
     class DllExport Log
     {
     public:
-        static void LogMessage(std::string);
-
+        static void LogMessage(std::string, std::string);
+		
     };
 
 }
 
 // Macros for the logging system
-#define LOG_ERROR(...)   ::MyEngine::Log::LogMessage(__VA_ARGS__);
-#define LOG_WARNING(...) ::MyEngine::Log::LogMessage(__VA_ARGS__);
-#define LOG_INFO(...)    ::MyEngine::Log::LogMessage(__VA_ARGS__);
-
+#define LOG_ERROR(...)   ::MyEngine::Log::LogMessage("ERROR: ", __VA_ARGS__); // did this work?
+#define LOG_WARNING(...) ::MyEngine::Log::LogMessage("WARNING: ", __VA_ARGS__);
+#define LOG_INFO(...)    ::MyEngine::Log::LogMessage("INFO: ", __VA_ARGS__);

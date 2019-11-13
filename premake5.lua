@@ -12,7 +12,7 @@ project "MyEngine"
     -- Precompiled header
     pchheader "pch.h"
 	filter "action:vs*" -- IF Visual Studio
-		pchsource "MyEngine/pch/pch.cpp"
+	    pchsource "MyEngine/CoreLibrary/pch.cpp"
 
     files
     {

@@ -4,9 +4,13 @@
 
 namespace MyEngine 
 {
-    void Log::LogMessage(std::string sMessage)
+	/*
+	    sMsgType is ERROR, WARNING, INFO
+		sMessage the actual message
+	*/
+    void Log::LogMessage(std::string sMsgType, std::string sMessage)
     {
-        std::cout << sMessage << std::endl;
+        std::cout << sMsgType << sMessage << std::endl;
     }
 
 }
