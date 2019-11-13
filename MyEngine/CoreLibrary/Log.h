@@ -20,7 +20,6 @@ namespace MyEngine
     class DllExport Log
     {
     public:
-        static void LogMessage();
         static void LogMessage(std::string);
 
     };

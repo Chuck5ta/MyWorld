@@ -11,8 +11,8 @@ project "MyEngine"
 
     -- Precompiled header
     pchheader "pch.h"
-    pchsource "MyEngine/pch/pch.cpp"
-  --  filter "action:vs*"  -- for Visual Studio
+	filter "action:vs*" -- IF Visual Studio
+		pchsource "MyEngine/pch/pch.cpp"
 
     files
     {
@@ -21,7 +21,7 @@ project "MyEngine"
         "%{prj.name}/**.cpp" -- include all source files
     }
 
-    includedirs { "MyEngine/pch" }
+    --includedirs { }
 
     filter "system:windows"
         cppdialect "C++17"
