@@ -1,5 +1,5 @@
 # MyWorld
-A virtual world where I can manipulate the contents in whatever way I wish. A virtual playground.
+(On hold - see My Voxel Terrain project) A virtual world where I can manipulate the contents in whatever way I wish. A virtual playground.
 
 # MyEngine
 The game engine that will allow MyWorld to exist
